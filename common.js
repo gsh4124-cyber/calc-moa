@@ -9,6 +9,14 @@ const CALCS = [
   ["rent.html", "전월세 전환 계산기", "보증금 ↔ 월세 환산"],
   ["area.html", "평수 계산기", "㎡ ↔ 평 변환"],
   ["age.html", "만나이 계산기", "만나이·연나이·띠·D-day"],
+  ["percent.html", "퍼센트 계산기", "비율·증감률·%p 계산"],
+  ["vat.html", "부가세 계산기", "공급가액 ↔ 합계금액"],
+  ["bmi.html", "BMI 계산기", "체질량지수·비만도"],
+  ["dday.html", "날짜·D-day 계산기", "며칠 남았는지, 며칠 후"],
+  ["hourly.html", "시급·주휴수당 계산기", "2026 최저시급 10,320원"],
+  ["charcount.html", "글자수 세기", "공백 포함·제외, 바이트"],
+  ["discount.html", "할인율 계산기", "할인 가격·할인율 역산"],
+  ["leave.html", "연차 계산기", "입사일 기준 연차 일수"],
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
