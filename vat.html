@@ -31,7 +31,7 @@
 </main>
 <footer></footer>
 <script>
-function calc(){const m=num("m");if(!m){alert("금액을 입력해 주세요.");return;}let s,v;if(document.getElementById("t").value==="supply"){s=m;v=Math.floor(m*0.1);}else{s=Math.floor(m/1.1);v=m-s;}
+function calc(){const m=num("m");if(!m){alert("금액을 입력해 주세요.");return;}let s,v;if(document.getElementById("t").value==="supply"){s=m;v=Math.floor(m*0.1);}else{s=Math.floor(m*10/11+1e-9);v=m-s;}
 show("out",`<div class="big">합계 ${won(s+v)}</div>${kv("공급가액",won(s))}${kv("부가세 (10%)",won(v))}${kv("합계금액",won(s+v))}`);}
 </script>
 </body>

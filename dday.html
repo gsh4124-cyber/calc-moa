@@ -31,7 +31,7 @@
 </main>
 <footer></footer>
 <script>
-const td=new Date();const f=d=>d.toISOString().slice(0,10);document.getElementById("d1").value=f(td);const nx=new Date(td);nx.setDate(nx.getDate()+100);document.getElementById("d2").value=f(nx);
+const td=new Date();const f=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;document.getElementById("d1").value=f(td);const nx=new Date(td);nx.setDate(nx.getDate()+100);document.getElementById("d2").value=f(nx);
 function calc(){const a=new Date(document.getElementById("d1").value),b=new Date(document.getElementById("d2").value);if(isNaN(a)){alert("시작 날짜를 입력해 주세요.");return;}
 const inc=document.getElementById("inc").checked?1:0;let h="";const W="일월화수목금토";
 if(!isNaN(b)){const diff=Math.round((b-a)/864e5);let wd=0;for(let d=new Date(Math.min(a,b));d<Math.max(a,b);d.setDate(d.getDate()+1)){const k=d.getDay();if(k&&k<6)wd++;}

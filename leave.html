@@ -30,7 +30,7 @@
 </main>
 <footer></footer>
 <script>
-document.getElementById("b").value=new Date().toISOString().slice(0,10);
+{const t=new Date();document.getElementById("b").value=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,"0")}-${String(t.getDate()).padStart(2,"0")}`;}
 function calc(){const j=new Date(document.getElementById("j").value),b=new Date(document.getElementById("b").value);if(isNaN(j)||isNaN(b)||b<j){alert("입사일과 기준일을 확인해 주세요.");return;}
 let m=(b.getFullYear()-j.getFullYear())*12+(b.getMonth()-j.getMonth());if(b.getDate()<j.getDate())m--;const y=Math.floor(m/12);
 if(y<1){show("out",`<div class="big">${Math.min(m,11)}일 (월 개근 기준)</div>${kv("근속",m+"개월")}${kv("안내","1년 미만은 1개월 개근마다 1일, 최대 11일")}`);return;}
